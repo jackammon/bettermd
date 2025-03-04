@@ -10,18 +10,18 @@ A clean, modern, markdown editor built with React, TypeScript, and Tailwind CSS.
 - **Responsive Design**: Works on desktop and mobile devices
 - **Clean UI**: Built with Tailwind CSS and Shadcn UI components
 
-## Usage
-
-1. Write your markdown in the left panel
-2. See the rendered result in the right panel
-3. Your content is automatically saved to local storage
-
 ## Technologies Used
 
-- **React**: UI library
-- **TypeScript**: Type-safe JavaScript
-- **Vite**: Fast build tool
-- **Tailwind CSS**: Utility-first CSS framework
-- **React-Markdown**: Markdown parser
-- **Remark-GFM**: GitHub-flavored markdown support
-- **Shadcn UI**: UI component system
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **React-Markdown**
+- **Remark-GFM**
+- **Shadcn UI**
+
+## Usage
+
+1. Write markdown in the left panel
+2. See the rendered result in the right panel
+3. Content is automatically saved to local storage
