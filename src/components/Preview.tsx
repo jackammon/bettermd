@@ -39,8 +39,8 @@ const Preview: React.FC<PreviewProps> = ({ markdown }) => {
   }, []);
 
   return (
-    <div className="h-full overflow-auto p-6 custom-scrollbar">
-      <div className="prose prose-sm md:prose-base lg:prose-lg dark:prose-invert max-w-none">
+    <div className="h-full overflow-auto p-4 md:p-8 custom-scrollbar">
+      <div className="prose prose-sm max-w-none dark:prose-invert prose-headings:mb-3 prose-p:my-2 prose-p:leading-relaxed prose-pre:my-3 prose-ul:my-2 prose-ol:my-2 prose-li:my-1 prose-li:marker:text-gray-500 prose-img:rounded-md prose-img:shadow-sm prose-a:font-medium">
         <ReactMarkdown 
           remarkPlugins={[remarkGfm]}
           components={{
