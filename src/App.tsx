@@ -74,16 +74,16 @@ Try editing this content to see the changes in real-time!
   return (
     <div className="flex flex-col h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="bg-[hsl(222.2,84%,4.9%)] text-white p-4 shadow-md flex items-center justify-between">
+      <header className="px-4 pt-4 pb-2 flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold">BetterMD</h1>
+          <h1 className="text-xl font-bold mb-1">BetterMD</h1>
           <p className="text-xs opacity-90">Live Markdown and LaTeX Editor</p>
         </div>
         <ToggleTheme />
       </header>
       
       {/* Main content */}
-      <main className="flex flex-col md:flex-row flex-1 overflow-hidden p-4 gap-4">
+      <main className="flex flex-col md:flex-row flex-1 overflow-hidden px-4 pb-4 pt-2 gap-4">
         {/* Editor panel */}
         <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-hidden flex flex-col">
           <Card className="flex-1 overflow-hidden shadow-md theme-card">
