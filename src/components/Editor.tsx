@@ -78,7 +78,7 @@ const Editor: React.FC<EditorProps> = ({ initialValue = '', onChange }) => {
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-2 flex border-t flex-wrap gap-1 items-center justify-between bg-background">
+      <div className="p-2 flex flex-wrap gap-1 items-center justify-between bg-background">
         <div className="flex flex-wrap gap-1 items-center">
           <Button 
             variant="ghost" 
@@ -173,13 +173,15 @@ const Editor: React.FC<EditorProps> = ({ initialValue = '', onChange }) => {
           <span className="text-xs">Export .md</span>
         </Button>
       </div>
-      <Textarea
-        ref={textareaRef}
-        value={markdown}
-        onChange={handleChange}
-        className="flex-1 resize-none font-mono p-4 border-0 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
-        placeholder="Type your markdown here..."
-      />
+      <div className="flex-1 border-t custom-scrollbar">
+        <Textarea
+          ref={textareaRef}
+          value={markdown}
+          onChange={handleChange}
+          className="h-full resize-none font-mono p-4 border-0 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0"
+          placeholder="Type your markdown here..."
+        />
+      </div>
     </div>
   );
 };

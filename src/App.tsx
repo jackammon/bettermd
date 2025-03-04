@@ -3,6 +3,7 @@ import './App.css';
 import Editor from './components/Editor';
 import Preview from './components/Preview';
 import ToggleTheme from './components/ui/toggle-theme';
+import { Card } from './components/ui/card';
 
 const STORAGE_KEY = 'bettermd-content';
 
@@ -82,20 +83,24 @@ Try editing this content to see the changes in real-time!
       </header>
       
       {/* Main content */}
-      <main className="flex flex-col md:flex-row flex-1 overflow-hidden">
+      <main className="flex flex-col md:flex-row flex-1 overflow-hidden p-4 gap-4">
         {/* Editor panel */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-hidden">
-          <Editor initialValue={markdown} onChange={handleChange} />
+        <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-hidden flex flex-col">
+          <Card className="flex-1 overflow-hidden shadow-md theme-card">
+            <Editor initialValue={markdown} onChange={handleChange} />
+          </Card>
         </div>
         
         {/* Preview panel */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full bg-card text-card-foreground overflow-auto editor-preview-divider">
-          <Preview markdown={markdown} />
+        <div className="w-full md:w-1/2 h-1/2 md:h-full overflow-hidden flex flex-col">
+          <Card className="flex-1 overflow-hidden shadow-md theme-card">
+            <Preview markdown={markdown} />
+          </Card>
         </div>
       </main>
       
       {/* Footer */}
-      <footer className="bg-muted text-muted-foreground p-2 text-center text-xs">
+      <footer className="p-2 text-center text-xs border-t">
         <p>Content is automatically saved to your browser's local storage</p>
       </footer>
     </div>
