@@ -118,11 +118,6 @@ h1 {
   border-left-width: 1px;
 }
 
-/* Clear any existing editor-preview-divider styles */
-.editor-preview-divider {
-  /* Reset styles */
-}
-
 /* Specific styling for the editor preview divider */
 @media (min-width: 768px) {
   .editor-preview-divider {
@@ -133,10 +128,4 @@ h1 {
   .light .editor-preview-divider {
     border-left: 1px solid rgba(0, 0, 0, 0.1);
   }
-}
-
-/* Add a specific test style to confirm CSS is working */
-.test-style {
-  background-color: red !important;
-  color: white !important;
 }
