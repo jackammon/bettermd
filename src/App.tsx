@@ -77,7 +77,7 @@ Try editing this content to see the changes in real-time!
       <header className="px-4 pt-4 pb-2 flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold mb-1">BetterMD</h1>
-          <p className="text-xs opacity-90">Live Markdown and LaTeX Editor</p>
+          <p className="text-xs opacity-90">Live Markdown Editor</p>
         </div>
         <ToggleTheme />
       </header>
