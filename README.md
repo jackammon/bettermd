@@ -1,6 +1,6 @@
 # BetterMD - Markdown Editor
 
-A clean, modern, GitHub-flavored markdown editor built with React, TypeScript, and Tailwind CSS.
+A clean, modern, markdown editor built with React, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -9,22 +9,6 @@ A clean, modern, GitHub-flavored markdown editor built with React, TypeScript, a
 - **Local Storage**: Your content is automatically saved to your browser
 - **Responsive Design**: Works on desktop and mobile devices
 - **Clean UI**: Built with Tailwind CSS and Shadcn UI components
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/bettermd.git
-
-# Navigate to the project directory
-cd bettermd
-
-# Install dependencies
-pnpm install
-
-# Start the development server
-pnpm dev
-```
 
 ## Usage
 
@@ -41,7 +25,3 @@ pnpm dev
 - **React-Markdown**: Markdown parser
 - **Remark-GFM**: GitHub-flavored markdown support
 - **Shadcn UI**: UI component system
-
-## License
-
-MIT
