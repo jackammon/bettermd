@@ -89,7 +89,7 @@ Try editing this content to see the changes in real-time!
         </div>
         
         {/* Preview panel */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full bg-card text-card-foreground overflow-auto md:border-l">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full bg-card text-card-foreground overflow-auto editor-preview-divider">
           <Preview markdown={markdown} />
         </div>
       </main>

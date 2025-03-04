@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -17,6 +17,28 @@ interface CodeBlockProps {
 }
 
 const Preview: React.FC<PreviewProps> = ({ markdown }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Detect dark mode
+  useEffect(() => {
+    const isDark = document.documentElement.classList.contains('dark');
+    setIsDarkMode(isDark);
+    
+    // Set up an observer to watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          const isDark = document.documentElement.classList.contains('dark');
+          setIsDarkMode(isDark);
+        }
+      });
+    });
+    
+    observer.observe(document.documentElement, { attributes: true });
+    
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="h-full border-t overflow-auto p-4">
       <Card className="border-0 shadow-none">
@@ -28,15 +50,26 @@ const Preview: React.FC<PreviewProps> = ({ markdown }) => {
                 code({ node, inline, className, children, ...props }: CodeBlockProps) {
                   const match = /language-(\w+)/.exec(className || '');
                   return !inline && match ? (
-                    <SyntaxHighlighter
-                      // @ts-ignore - type definitions are incorrect but the library works
-                      style={vscDarkPlus}
-                      language={match[1]}
-                      PreTag="div"
-                      {...props}
+                    <div 
+                      className="overflow-hidden rounded-md" 
+                      style={!isDarkMode ? { backgroundColor: 'var(--tw-prose-pre-bg)' } : {}}
                     >
-                      {String(children).replace(/\n$/, '')}
-                    </SyntaxHighlighter>
+                      <SyntaxHighlighter
+                        // @ts-ignore - type definitions are incorrect but the library works
+                        style={vscDarkPlus}
+                        language={match[1]}
+                        PreTag="div"
+                        customStyle={{
+                          margin: 0,
+                          borderRadius: 0,
+                          background: !isDarkMode ? 'var(--tw-prose-pre-bg)' : undefined,
+                          color: 'var(--tw-prose-pre-code)'
+                        }}
+                        {...props}
+                      >
+                        {String(children).replace(/\n$/, '')}
+                      </SyntaxHighlighter>
+                    </div>
                   ) : (
                     <code className={className} {...props}>
                       {children}

@@ -35,6 +35,10 @@
 
     --radius: 0.5rem;
     --tw-border-style: solid;
+    
+    /* Prose variables */
+    --tw-prose-pre-bg: #f8f8f8;
+    --tw-prose-pre-code: #1E1E1E;
   }
 
   .dark {
@@ -67,6 +71,10 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
     --tw-border-style: solid;
+    
+    /* Prose variables in dark mode */
+    --tw-prose-pre-bg: #1E1E1E;
+    --tw-prose-pre-code: #f8f8f8;
   }
 }
 
@@ -108,6 +116,23 @@ h1 {
 .border-l {
   border-left-style: var(--tw-border-style);
   border-left-width: 1px;
+}
+
+/* Clear any existing editor-preview-divider styles */
+.editor-preview-divider {
+  /* Reset styles */
+}
+
+/* Specific styling for the editor preview divider */
+@media (min-width: 768px) {
+  .editor-preview-divider {
+    border-color: color-mix(in oklab, var(--color-white) 10%, transparent) !important;
+    border-left: 1px solid
+  }
+  
+  .light .editor-preview-divider {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Add a specific test style to confirm CSS is working */
