@@ -1,6 +1,7 @@
 # BetterMD - Markdown Editor
+A clean, modern, markdown editor built with React, TypeScript, and Tailwind CSS.  
 
-A clean, modern, markdown editor built with React, TypeScript, and Tailwind CSS.
+Got tired of using ugly markdown editors online ¯\_(ツ)_/¯
 
 ## Features
 
@@ -19,9 +20,3 @@ A clean, modern, markdown editor built with React, TypeScript, and Tailwind CSS.
 - **React-Markdown**
 - **Remark-GFM**
 - **Shadcn UI**
-
-## Usage
-
-1. Write markdown in the left panel
-2. See the rendered result in the right panel
-3. Content is automatically saved to local storage
