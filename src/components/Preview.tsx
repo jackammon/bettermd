@@ -18,7 +18,7 @@ interface CodeBlockProps {
 
 const Preview: React.FC<PreviewProps> = ({ markdown }) => {
   return (
-    <div className="h-full overflow-auto p-4">
+    <div className="h-full border-t overflow-auto p-4">
       <Card className="border-0 shadow-none">
         <CardContent className="p-0">
           <div className="prose prose-sm md:prose-base lg:prose-lg dark:prose-invert max-w-none">

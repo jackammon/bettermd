@@ -73,7 +73,7 @@ Try editing this content to see the changes in real-time!
   return (
     <div className="flex flex-col h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="bg-slate-900 dark:bg-slate-900 text-white dark:text-white p-4 shadow-md flex items-center justify-between">
+      <header className="bg-[hsl(222.2,84%,4.9%)] text-white p-4 shadow-md flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold">BetterMD</h1>
           <p className="text-xs opacity-90">Live Markdown and LaTeX Editor</p>
@@ -89,7 +89,7 @@ Try editing this content to see the changes in real-time!
         </div>
         
         {/* Preview panel */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full bg-card text-card-foreground overflow-auto">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full bg-card text-card-foreground overflow-auto md:border-l">
           <Preview markdown={markdown} />
         </div>
       </main>

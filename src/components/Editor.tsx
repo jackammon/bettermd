@@ -78,7 +78,7 @@ const Editor: React.FC<EditorProps> = ({ initialValue = '', onChange }) => {
 
   return (
     <div className="h-full flex flex-col">
-      <div className="p-2 bg-muted flex flex-wrap gap-1 items-center justify-between">
+      <div className="p-2 flex border-t flex-wrap gap-1 items-center justify-between bg-background">
         <div className="flex flex-wrap gap-1 items-center">
           <Button 
             variant="ghost" 

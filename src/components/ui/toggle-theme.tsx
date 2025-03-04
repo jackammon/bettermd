@@ -3,26 +3,6 @@ import { Button } from './button';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../lib/theme';
 
-// Function to get initial theme from localStorage or system preference
-const getInitialTheme = (): 'light' | 'dark' => {
-  // Check if window is defined (for SSR)
-  if (typeof window !== 'undefined') {
-    // Check localStorage first
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'light' || storedTheme === 'dark') {
-      return storedTheme;
-    }
-    
-    // If no preference in localStorage, use system preference
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-  }
-  
-  // Default to light theme
-  return 'light';
-};
-
 const ToggleTheme: React.FC = () => {
   const { theme, toggleTheme, mounted } = useTheme();
 
