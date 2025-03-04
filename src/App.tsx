@@ -24,7 +24,7 @@ This is a live markdown editor.
 ## Features
 
 - **Live Preview**: See your changes as you type
-- **GitHub Flavored Markdown**: Full support for tables, code blocks, and more
+- **Simple Markdown**: Full support for tables, code blocks, and more
 - **Local Storage**: Your content is automatically saved as you type
 
 ## Example Features
@@ -49,7 +49,7 @@ function hello() {
 ### Task Lists
 
 - [x] Create markdown editor
-- [x] Add GitHub-flavored markdown support
+- [x] Add markdown support
 - [x] Implement local storage
 - [ ] Add more features
 
